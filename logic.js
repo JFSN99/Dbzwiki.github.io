@@ -242,11 +242,12 @@ async function fetchOnly(e, IReq){
     const Json = await req.json();
     const Name = document.createElement("li");
     const img = document.createElement("img");
+    const infoBase = document.createElement("div");
+    infoBase.classList.add('AreaTr')
 
     if(IReq === 'characters'){
 
-        const infoBase = document.createElement("div");
-        infoBase.classList.add('AreaTr')
+        
         infoBase.appendChild(desc);
         infoBase.appendChild(imgBox);
         const Ki = document.createElement("li");
@@ -320,9 +321,12 @@ async function fetchOnly(e, IReq){
         img.setAttribute("src", `${Json.image}`);
         Name.innerHTML = `<div>Nome:</div> <div>${Json.name}</div>`;
         img.classList.add("infoImg");
+        infoBase.appendChild(imgBox);
         desc.appendChild(Name);
+        infoBase.appendChild(desc);
         Name.classList.add('infoItem');
         imgBox.appendChild(img);
+        InfoBody.appendChild(infoBase)
 
     }
     
