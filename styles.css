@@ -419,7 +419,7 @@ body{
 
 .infosS{
     background-image: url('./public/Guerreiro\ Solitário\ no\ Visor\ Escarlate.png'); 
-    width: 100vw;
+    width: 100%;
     background-position: center-left;
     background-size: cover;
     padding-bottom: 20px;
