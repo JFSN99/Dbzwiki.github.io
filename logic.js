@@ -335,7 +335,7 @@ async function fetchOnly(e, IReq){
 
 function Options(Json, IReq){
 
-    const Lista = document.querySelector(".Lista");
+    const Lista = document.querySelector(".opts");
     Lista.innerHTML = "";
     const headtitle = "";
     let cont = 10*(funcs.page-1) + 1;
@@ -351,7 +351,16 @@ function Options(Json, IReq){
             title.classList.add("Pers")
             const Img = document.createElement("img");
             if(IReq === "planets"){
+                Lista.classList.add('Lista');
+                if(Lista.classList.contains('ListaP')){
+                    Lista.classList.remove('ListaP');
+                }
                 Img.setAttribute("style","border:1px solid black")
+            }else{
+                Lista.classList.add('ListaP');
+                if(Lista.classList.contains('Lista')){
+                    Lista.classList.remove('Lista');
+                }
             }
             Img.setAttribute("src",`${item.image}`);
             Img.classList.add("optImg");

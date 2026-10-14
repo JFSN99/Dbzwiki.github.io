@@ -138,6 +138,14 @@ body{
 
 .Lista{
     display: grid;
+    grid-template-columns: repeat(1,1fr);
+    background-color: rgb(21,21,21);
+    gap:4px;
+    
+}
+
+.ListaP{
+    display: grid;
     grid-template-columns: repeat(2,1fr);
     background-color: rgb(21,21,21);
     gap:4px;
@@ -426,7 +434,7 @@ body{
 
 }
 
-@media(min-width:767px) and (max-width:1439px){
+@media(min-width:767px) and (max-width:1023px){
 
     header{
         display: flex;
@@ -437,7 +445,15 @@ body{
         
     }
     .Lista{
-        grid-template-columns: repeat(4, 1fr);
+       
+        grid-template-columns: repeat(2,1fr);
+        
+    }
+
+    .ListaP{
+       
+        grid-template-columns: repeat(4,1fr);
+        
     }
     .infoBody{
         display: flex;
@@ -463,7 +479,8 @@ body{
     }
   
 }
-@media(min-width:1440px){
+
+@media(min-width:1024px) and (max-width:1439px){
 
     header{
         display: flex;
@@ -474,7 +491,61 @@ body{
         
     }
     .Lista{
-        grid-template-columns: repeat(5, 1fr);
+       
+        grid-template-columns: repeat(3,1fr);
+        
+    }
+
+    .ListaP{
+       
+        grid-template-columns: repeat(4,1fr);
+        
+    }
+    .infoBody{
+        display: flex;
+        flex-direction: row;
+        
+    }
+
+    
+    .AreaTr{
+
+        flex: 2;
+        max-width: 600px;
+        margin: auto;
+
+    }
+    .infosTransf{
+
+        flex: 2;
+
+    }
+    .Transftit{
+        text-align: center;
+    }
+  
+}
+
+@media(min-width:1440px){
+
+    header{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+   .Lista{
+       
+        grid-template-columns: repeat(4,1fr);
+        
+    }
+
+    .ListaP{
+       
+        grid-template-columns: repeat(6,1fr);
+        
     }
 
     .infoBody{
